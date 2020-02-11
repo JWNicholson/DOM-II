@@ -79,14 +79,17 @@ destDiv.addEventListener("wheel", () => {
    event.stopPropagation();
 })
 
-
-
-//////// Prevent link from working
-const blockLinks = document.querySelector(".nav-link");
+//Prevent links from functioning
+const blockLinks = document.querySelectorAll(".nav-link");
 //console.log(blockLinks);
-    blockLinks.addEventListener("click", (event) => {
-        event.preventDefault();
+blockLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
     })
+})
+
+
+    
 
 
 
