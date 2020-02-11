@@ -63,6 +63,34 @@ const destBtn = document.querySelector(".btn");
         destBtn.style.transform = "scale(0.5)";
     })
 
+
+/////////Stop Propagation
+
+const contentPick = document.querySelector(".content-pick");
+//console.log(contentPick);
+contentPick.addEventListener("wheel", () => {
+    contentPick.style.backgroundColor = "blue";  
+})
+
+const destDiv = document.querySelector(".destination");
+//console.log(destDiv);
+destDiv.addEventListener("wheel", () => {
+    destDiv.style.backgroundColor = "red";
+   event.stopPropagation();
+})
+
+
+
+//////// Prevent link from working
+const blockLinks = document.querySelector(".nav-link");
+//console.log(blockLinks);
+    blockLinks.addEventListener("click", (event) => {
+        event.preventDefault();
+    })
+
+
+
+
   
   
 
