@@ -57,7 +57,11 @@ document.addEventListener("keydown",  (e) => {
     })
 
 //10
-
+const destBtn = document.querySelector(".btn");
+//console.log(destBtn);
+    destBtn.addEventListener("wheel", () => {
+        destBtn.style.transform = "scale(0.5)";
+    })
 
   
   
